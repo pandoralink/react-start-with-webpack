@@ -13,4 +13,13 @@ module.exports = {
     publicPath: "",
     filename: "bundle.js",
   },
+  module: {
+    rules: [
+      {
+        test: /[\.js|\.jsx]$/,
+        loader: "babel-loader",
+        exclude: /node_modules/,
+      },
+    ],
+  },
 };

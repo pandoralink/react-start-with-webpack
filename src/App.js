@@ -1,25 +1,18 @@
-import { useState, createElement } from "react";
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  let [count, setCount] = useState(0);
 
   const handleClick = () => {
     setCount(++count);
   };
 
-  return createElement("div", {
-    children: [
-      "count:" + count,
-      createElement(
-        "button",
-        {
-          key: "uniqueId",
-          onClick: handleClick,
-        },
-        "click + 1"
-      ),
-    ],
-  });
+  return (
+    <div>
+      {"count:" + count}
+      <button onClick={handleClick}>click + 1</button>
+    </div>
+  );
 }
 
 export default App;

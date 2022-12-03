@@ -4,7 +4,7 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  React.createElement(React.StrictMode, {
-    children: [React.createElement(App, { key: "1" })],
-  })
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
